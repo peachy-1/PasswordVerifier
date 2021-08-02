@@ -1,0 +1,20 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<!-- style="display: flex; justify-content: center; align-items: center; height: 100vh" -->
+<div class="container">
+
+        <h2>You have a rating of {{ result }} out of 10 </h2>
+
+        <a class="link-primary" href="http://127.0.0.1:5000/">Try another password</a>
+        <ul>
+                <li>For some advised password practices, please click <a target="_blank"
+                                href="https://www.muhlenberg.edu/offices/oit/about/policies_procedures/strong-passwords.html">here</a>.
+                </li>
+
+                <li>Check to see if you have a breached email account <a target="_blank" href="https://haveibeenpwned.com/">here</a>.
+                </li>
+        </ul>
+
+</div>
+{% endblock %}
