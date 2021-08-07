@@ -1,20 +1,35 @@
 {% extends "bootstrap/base.html" %}
 
 {% block content %}
-<!-- style="display: flex; justify-content: center; align-items: center; height: 100vh" -->
 <div class="container">
 
-        <h2>You have a rating of {{ result }} out of 10 </h2>
+        <h2>You entered <strong>{{ password }}</strong>, which has a rating of <strong>{{ result }} out of 10</strong>. </h2>
 
-        <a class="link-primary" href="http://127.0.0.1:5000/">Try another password</a>
+
+
+        <a class="link-primary" href="http://gregoryca1.pythonanywhere.com/">Try another password</a>
         <ul>
                 <li>For some advised password practices, please click <a class="link-primary" target="_blank"
                                 href="https://www.muhlenberg.edu/offices/oit/about/policies_procedures/strong-passwords.html">here</a>.
                 </li>
 
+
+
                 <li>Check to see if you have a breached email account <a class="link-primary" target="_blank" href="https://haveibeenpwned.com/">here</a>.
                 </li>
         </ul>
 
+        <div class="alert alert-warning" role="alert">
+            <strong>Note</strong>: The <em>HaveIBeenPwned</em> API is now only available after paying a monthly fee.
+            See <a src="https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/" target="_blank">here</a> for more details from the API author.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
 </div>
+
+<script>
+    $('.alert').alert()
+</script>
 {% endblock %}
