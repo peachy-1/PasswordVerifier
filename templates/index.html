@@ -8,11 +8,16 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-<div class="container" style="display: flex; justify-content: center; align-items: center; height: 50vh">
-        <form class="form" action = "http://gregoryca1.pythonanywhere.com/result" method="POST">
-            <p>Password <input type="password" name="password" id="password"/></p>
+<div class="container">
+        <form class="form" action = "http://gregoryca1.pythonanywhere.com/password_result" method="POST">
+            <p>Password <input type="password" name="password" id="password" required/></p>
             <input type="checkbox" onclick="showPassword()">Show Password
             <p><input type="submit" value="Check Password" /></p>
+        </form>
+
+        <form class="form" action = "http://gregoryca1.pythonanywhere.com/email_result" method="POST">
+          <p>Email <input type="email" name="email" id="email" required/></p>
+          <p><input type="submit" value="Submit email" /></p>
         </form>
 </div>
 
