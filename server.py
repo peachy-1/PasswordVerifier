@@ -20,7 +20,7 @@ def password_result():
 @app.route('/email_result', methods = [ 'POST', 'GET' ])
 def email_result():
     if request.method == 'POST':
-        hibp_key = {'hibp-api-key': '009274fc7df0484a98f9ff01699097a7'}
+        hibp_key = {'hibp-api-key': <<API-KEY>>}
         email_address = request.form['email']
         response = requests.request('GET', f'https://haveibeenpwned.com/api/v3/breachedaccount/{email_address}', headers = hibp_key)
 
